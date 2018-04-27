@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB34361A2016D8DD00FEA045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436192016D8DD00FEA045 /* AppDelegate.m */; };
+		AB34361D2016D8DD00FEA045 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34361C2016D8DD00FEA045 /* ViewController.m */; };
+		AB3436202016D8DD00FEA045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB34361E2016D8DD00FEA045 /* Main.storyboard */; };
+		AB3436222016D8DD00FEA045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3436212016D8DD00FEA045 /* Assets.xcassets */; };
+		AB3436252016D8DD00FEA045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3436232016D8DD00FEA045 /* LaunchScreen.storyboard */; };
+		AB3436282016D8DD00FEA045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436272016D8DD00FEA045 /* main.m */; };
+		AB3436432016D91D00FEA045 /* LCDiffChange.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34363D2016D91D00FEA045 /* LCDiffChange.m */; };
+		AB3436442016D91D00FEA045 /* LCDiffManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34363E2016D91D00FEA045 /* LCDiffManager.m */; };
+		AB3436452016D91D00FEA045 /* LCDiffStratege.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436422016D91D00FEA045 /* LCDiffStratege.m */; };
+		AB34366E20171BCF00FEA045 /* LCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34366D20171BCF00FEA045 /* LCDUser.m */; };
+		AB343674201729D000FEA045 /* LCDiffHeckle.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.mm */; };
+		AB343678201730E600FEA045 /* LCDiffHeckle.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.mm */; };
+		AB3436A320185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */; };
+		AB3436A420185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */; };
+		AB3436A5201881B600FEA045 /* LCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34366D20171BCF00FEA045 /* LCDUser.m */; };
+		AB3436E22019775200FEA045 /* UICollectionView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436E12019775200FEA045 /* UICollectionView+DeepDiff.m */; };
+		AB3436E32019775200FEA045 /* UICollectionView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436E12019775200FEA045 /* UICollectionView+DeepDiff.m */; };
+		AB4C674320613ED2007E04A4 /* LCDiffIGHeckle.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB4C674220613ED2007E04A4 /* LCDiffIGHeckle.mm */; };
+		AB4C6746206141FF007E04A4 /* IGListMoveIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4C6745206141FF007E04A4 /* IGListMoveIndex.m */; };
+		AB4C67482061F4AB007E04A4 /* iGLHeckleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4C67472061F4AB007E04A4 /* iGLHeckleTest.m */; };
+		AB731322201F2224008EA62B /* HeckleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB731321201F2224008EA62B /* HeckleTest.m */; };
+		ABDED11C203FAF070064DBAA /* NSObject+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDED11B203FAF070064DBAA /* NSObject+DeepDiff.m */; };
+		ABDED11E203FB6EF0064DBAA /* diffPerformanceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDED11D203FB6EF0064DBAA /* diffPerformanceTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB34362E2016D8DD00FEA045 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB34360D2016D8DD00FEA045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB3436142016D8DD00FEA045;
+			remoteInfo = DeepDiffOC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB3436152016D8DD00FEA045 /* DeepDiffOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepDiffOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3436182016D8DD00FEA045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB3436192016D8DD00FEA045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB34361B2016D8DD00FEA045 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AB34361C2016D8DD00FEA045 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB34361F2016D8DD00FEA045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB3436212016D8DD00FEA045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB3436242016D8DD00FEA045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB3436262016D8DD00FEA045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3436272016D8DD00FEA045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB34362D2016D8DD00FEA045 /* DeepDiffOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepDiffOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3436332016D8DD00FEA045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB34363D2016D91D00FEA045 /* LCDiffChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDiffChange.m; sourceTree = "<group>"; };
+		AB34363E2016D91D00FEA045 /* LCDiffManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDiffManager.m; sourceTree = "<group>"; };
+		AB34363F2016D91D00FEA045 /* LCDiffChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDiffChange.h; sourceTree = "<group>"; };
+		AB3436402016D91D00FEA045 /* LCDiffStratege.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDiffStratege.h; sourceTree = "<group>"; };
+		AB3436412016D91D00FEA045 /* LCDiffManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDiffManager.h; sourceTree = "<group>"; };
+		AB3436422016D91D00FEA045 /* LCDiffStratege.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDiffStratege.m; sourceTree = "<group>"; };
+		AB3436462016DAA000FEA045 /* LCDeepDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDeepDiff.h; sourceTree = "<group>"; };
+		AB34366C20171BCF00FEA045 /* LCDUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDUser.h; sourceTree = "<group>"; };
+		AB34366D20171BCF00FEA045 /* LCDUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCDUser.m; sourceTree = "<group>"; };
+		AB343672201729D000FEA045 /* LCDiffHeckle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDiffHeckle.h; sourceTree = "<group>"; };
+		AB343673201729D000FEA045 /* LCDiffHeckle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCDiffHeckle.mm; sourceTree = "<group>"; };
+		AB3436A120185FFE00FEA045 /* UITableView+DeepDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+DeepDiff.h"; sourceTree = "<group>"; };
+		AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DeepDiff.m"; sourceTree = "<group>"; };
+		AB3436E02019775200FEA045 /* UICollectionView+DeepDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+DeepDiff.h"; sourceTree = "<group>"; };
+		AB3436E12019775200FEA045 /* UICollectionView+DeepDiff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+DeepDiff.m"; sourceTree = "<group>"; };
+		AB4C674120613ED2007E04A4 /* LCDiffIGHeckle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDiffIGHeckle.h; sourceTree = "<group>"; };
+		AB4C674220613ED2007E04A4 /* LCDiffIGHeckle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCDiffIGHeckle.mm; sourceTree = "<group>"; };
+		AB4C6744206141FF007E04A4 /* IGListMoveIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListMoveIndex.h; sourceTree = "<group>"; };
+		AB4C6745206141FF007E04A4 /* IGListMoveIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGListMoveIndex.m; sourceTree = "<group>"; };
+		AB4C67472061F4AB007E04A4 /* iGLHeckleTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iGLHeckleTest.m; sourceTree = "<group>"; };
+		AB731321201F2224008EA62B /* HeckleTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeckleTest.m; sourceTree = "<group>"; };
+		ABDED11A203FAF070064DBAA /* NSObject+DeepDiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeepDiff.h"; sourceTree = "<group>"; };
+		ABDED11B203FAF070064DBAA /* NSObject+DeepDiff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeepDiff.m"; sourceTree = "<group>"; };
+		ABDED11D203FB6EF0064DBAA /* diffPerformanceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = diffPerformanceTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB3436122016D8DD00FEA045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB34362A2016D8DD00FEA045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB34360C2016D8DD00FEA045 = {
+			isa = PBXGroup;
+			children = (
+				AB34363C2016D90200FEA045 /* Source */,
+				AB3436172016D8DD00FEA045 /* DeepDiffOC */,
+				AB3436302016D8DD00FEA045 /* DeepDiffOCTests */,
+				AB3436162016D8DD00FEA045 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB3436162016D8DD00FEA045 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB3436152016D8DD00FEA045 /* DeepDiffOC.app */,
+				AB34362D2016D8DD00FEA045 /* DeepDiffOCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB3436172016D8DD00FEA045 /* DeepDiffOC */ = {
+			isa = PBXGroup;
+			children = (
+				AB3436182016D8DD00FEA045 /* AppDelegate.h */,
+				AB3436192016D8DD00FEA045 /* AppDelegate.m */,
+				AB34361B2016D8DD00FEA045 /* ViewController.h */,
+				AB34361C2016D8DD00FEA045 /* ViewController.m */,
+				AB34361E2016D8DD00FEA045 /* Main.storyboard */,
+				AB3436212016D8DD00FEA045 /* Assets.xcassets */,
+				AB3436232016D8DD00FEA045 /* LaunchScreen.storyboard */,
+				AB3436262016D8DD00FEA045 /* Info.plist */,
+				AB3436272016D8DD00FEA045 /* main.m */,
+			);
+			path = DeepDiffOC;
+			sourceTree = "<group>";
+		};
+		AB3436302016D8DD00FEA045 /* DeepDiffOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABDED11D203FB6EF0064DBAA /* diffPerformanceTest.m */,
+				AB731321201F2224008EA62B /* HeckleTest.m */,
+				AB4C67472061F4AB007E04A4 /* iGLHeckleTest.m */,
+				AB3436332016D8DD00FEA045 /* Info.plist */,
+				AB34366C20171BCF00FEA045 /* LCDUser.h */,
+				AB34366D20171BCF00FEA045 /* LCDUser.m */,
+			);
+			path = DeepDiffOCTests;
+			sourceTree = "<group>";
+		};
+		AB34363C2016D90200FEA045 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AB34369E20185EE300FEA045 /* Extension */,
+				AB34367520172A6400FEA045 /* Model */,
+				AB34367620172A7700FEA045 /* Stratege */,
+				AB3436462016DAA000FEA045 /* LCDeepDiff.h */,
+				AB3436412016D91D00FEA045 /* LCDiffManager.h */,
+				AB34363E2016D91D00FEA045 /* LCDiffManager.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AB34367520172A6400FEA045 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB34363F2016D91D00FEA045 /* LCDiffChange.h */,
+				AB34363D2016D91D00FEA045 /* LCDiffChange.m */,
+				AB4C6744206141FF007E04A4 /* IGListMoveIndex.h */,
+				AB4C6745206141FF007E04A4 /* IGListMoveIndex.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB34367620172A7700FEA045 /* Stratege */ = {
+			isa = PBXGroup;
+			children = (
+				AB3436402016D91D00FEA045 /* LCDiffStratege.h */,
+				AB3436422016D91D00FEA045 /* LCDiffStratege.m */,
+				AB343672201729D000FEA045 /* LCDiffHeckle.h */,
+				AB343673201729D000FEA045 /* LCDiffHeckle.mm */,
+				AB4C674120613ED2007E04A4 /* LCDiffIGHeckle.h */,
+				AB4C674220613ED2007E04A4 /* LCDiffIGHeckle.mm */,
+			);
+			path = Stratege;
+			sourceTree = "<group>";
+		};
+		AB34369E20185EE300FEA045 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ABDED11A203FAF070064DBAA /* NSObject+DeepDiff.h */,
+				ABDED11B203FAF070064DBAA /* NSObject+DeepDiff.m */,
+				AB3436A120185FFE00FEA045 /* UITableView+DeepDiff.h */,
+				AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */,
+				AB3436E02019775200FEA045 /* UICollectionView+DeepDiff.h */,
+				AB3436E12019775200FEA045 /* UICollectionView+DeepDiff.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB3436142016D8DD00FEA045 /* DeepDiffOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB3436362016D8DD00FEA045 /* Build configuration list for PBXNativeTarget "DeepDiffOC" */;
+			buildPhases = (
+				AB3436112016D8DD00FEA045 /* Sources */,
+				AB3436122016D8DD00FEA045 /* Frameworks */,
+				AB3436132016D8DD00FEA045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepDiffOC;
+			productName = DeepDiffOC;
+			productReference = AB3436152016D8DD00FEA045 /* DeepDiffOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB34362C2016D8DD00FEA045 /* DeepDiffOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB3436392016D8DD00FEA045 /* Build configuration list for PBXNativeTarget "DeepDiffOCTests" */;
+			buildPhases = (
+				AB3436292016D8DD00FEA045 /* Sources */,
+				AB34362A2016D8DD00FEA045 /* Frameworks */,
+				AB34362B2016D8DD00FEA045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB34362F2016D8DD00FEA045 /* PBXTargetDependency */,
+			);
+			name = DeepDiffOCTests;
+			productName = DeepDiffOCTests;
+			productReference = AB34362D2016D8DD00FEA045 /* DeepDiffOCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB34360D2016D8DD00FEA045 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = bingolin;
+				TargetAttributes = {
+					AB3436142016D8DD00FEA045 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AB34362C2016D8DD00FEA045 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB3436142016D8DD00FEA045;
+					};
+				};
+			};
+			buildConfigurationList = AB3436102016D8DD00FEA045 /* Build configuration list for PBXProject "DeepDiffOC" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB34360C2016D8DD00FEA045;
+			productRefGroup = AB3436162016D8DD00FEA045 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB3436142016D8DD00FEA045 /* DeepDiffOC */,
+				AB34362C2016D8DD00FEA045 /* DeepDiffOCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB3436132016D8DD00FEA045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3436252016D8DD00FEA045 /* LaunchScreen.storyboard in Resources */,
+				AB3436222016D8DD00FEA045 /* Assets.xcassets in Resources */,
+				AB3436202016D8DD00FEA045 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB34362B2016D8DD00FEA045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB3436112016D8DD00FEA045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3436A5201881B600FEA045 /* LCDUser.m in Sources */,
+				AB343678201730E600FEA045 /* LCDiffHeckle.mm in Sources */,
+				AB3436442016D91D00FEA045 /* LCDiffManager.m in Sources */,
+				ABDED11C203FAF070064DBAA /* NSObject+DeepDiff.m in Sources */,
+				AB3436A320185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */,
+				AB34361D2016D8DD00FEA045 /* ViewController.m in Sources */,
+				AB3436282016D8DD00FEA045 /* main.m in Sources */,
+				AB34361A2016D8DD00FEA045 /* AppDelegate.m in Sources */,
+				AB3436452016D91D00FEA045 /* LCDiffStratege.m in Sources */,
+				AB3436E22019775200FEA045 /* UICollectionView+DeepDiff.m in Sources */,
+				AB3436432016D91D00FEA045 /* LCDiffChange.m in Sources */,
+				AB4C6746206141FF007E04A4 /* IGListMoveIndex.m in Sources */,
+				AB4C674320613ED2007E04A4 /* LCDiffIGHeckle.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB3436292016D8DD00FEA045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB34366E20171BCF00FEA045 /* LCDUser.m in Sources */,
+				AB3436E32019775200FEA045 /* UICollectionView+DeepDiff.m in Sources */,
+				AB343674201729D000FEA045 /* LCDiffHeckle.mm in Sources */,
+				AB731322201F2224008EA62B /* HeckleTest.m in Sources */,
+				AB4C67482061F4AB007E04A4 /* iGLHeckleTest.m in Sources */,
+				ABDED11E203FB6EF0064DBAA /* diffPerformanceTest.m in Sources */,
+				AB3436A420185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB34362F2016D8DD00FEA045 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB3436142016D8DD00FEA045 /* DeepDiffOC */;
+			targetProxy = AB34362E2016D8DD00FEA045 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB34361E2016D8DD00FEA045 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB34361F2016D8DD00FEA045 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB3436232016D8DD00FEA045 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB3436242016D8DD00FEA045 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB3436342016D8DD00FEA045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB3436352016D8DD00FEA045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB3436372016D8DD00FEA045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				INFOPLIST_FILE = DeepDiffOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB3436382016D8DD00FEA045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				INFOPLIST_FILE = DeepDiffOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB34363A2016D8DD00FEA045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				INFOPLIST_FILE = DeepDiffOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepDiffOC.app/DeepDiffOC";
+			};
+			name = Debug;
+		};
+		AB34363B2016D8DD00FEA045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				INFOPLIST_FILE = DeepDiffOCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepDiffOC.app/DeepDiffOC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB3436102016D8DD00FEA045 /* Build configuration list for PBXProject "DeepDiffOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB3436342016D8DD00FEA045 /* Debug */,
+				AB3436352016D8DD00FEA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB3436362016D8DD00FEA045 /* Build configuration list for PBXNativeTarget "DeepDiffOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB3436372016D8DD00FEA045 /* Debug */,
+				AB3436382016D8DD00FEA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB3436392016D8DD00FEA045 /* Build configuration list for PBXNativeTarget "DeepDiffOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB34363A2016D8DD00FEA045 /* Debug */,
+				AB34363B2016D8DD00FEA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB34360D2016D8DD00FEA045 /* Project object */;
+}
