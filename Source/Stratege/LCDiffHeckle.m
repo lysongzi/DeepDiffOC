@@ -63,7 +63,7 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
 
 - (NSArray<LCDiffChange *> *)diff:(NSArray<LCDiffModel*> *)oldItems newItems:(NSArray<LCDiffModel*> *)newItems
 {
-    NSMutableDictionary<NSNumber *, LCDTableEntry *> *table = [NSMutableDictionary new];
+    NSMutableDictionary<id<NSCopying>, LCDTableEntry *> *table = [NSMutableDictionary new];
     
     NSMutableArray *oldArray = [NSMutableArray new];
     NSMutableArray *newArray = [NSMutableArray new];
@@ -83,16 +83,16 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
  @param table <#table description#>
  @param newArray <#newArray description#>
  */
-- (void)perform1stPassWithNewItems:(NSArray *)newItems table:(NSMutableDictionary<NSNumber *, LCDTableEntry *> *)table newArray:(NSMutableArray *)newArray
+- (void)perform1stPassWithNewItems:(NSArray *)newItems table:(NSMutableDictionary<id<NSCopying>, LCDTableEntry *> *)table newArray:(NSMutableArray *)newArray
 {
-    [newItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSNumber *hashValue = @([((NSObject *)obj) hash]);
-        LCDTableEntry *tableEntry = table[hashValue] ?: [LCDTableEntry new];
+    for (int idx = 0; idx < newItems.count; idx++) {
+        id<NSCopying> key = [newItems[idx] diffIdentifier];
+        LCDTableEntry *tableEntry = table[key] ?: [LCDTableEntry new];
         
         tableEntry.aNewCounter++;
         [newArray addObject:tableEntry];
-        table[hashValue] = tableEntry;
-    }];
+        table[key] = tableEntry;
+    }
 }
 
 /**
@@ -102,17 +102,16 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
  @param table <#table description#>
  @param oldArray <#oldArray description#>
  */
-- (void)perform2stPassWithOldItems:(NSArray *)oldItems table:(NSMutableDictionary<NSNumber *, LCDTableEntry *> *)table oldArray:(NSMutableArray *)oldArray
+- (void)perform2stPassWithOldItems:(NSArray *)oldItems table:(NSMutableDictionary<id<NSCopying>, LCDTableEntry *> *)table oldArray:(NSMutableArray *)oldArray
 {
-    [oldItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSNumber *hashValue = @([((NSObject *)obj) hash]);
-        LCDTableEntry *tableEntry = table[hashValue] ? table[hashValue] : [LCDTableEntry new];
+    for (int idx = 0; idx < oldItems.count; idx++) {
+        id<NSCopying> key = [oldItems[idx] diffIdentifier];
+        LCDTableEntry *tableEntry = table[key] ?: [LCDTableEntry new];
         
-        tableEntry.aOldCounter++;
-        [tableEntry.indexesInOldFile addObject:@(idx)];
+        tableEntry.aNewCounter++;
         [oldArray addObject:tableEntry];
-        table[hashValue] = tableEntry;
-    }];
+        table[key] = tableEntry;
+    }
 }
 
 /**
@@ -123,7 +122,8 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
  */
 - (void)perform3stPassWithNewArray:(NSMutableArray *)newArray oldArray:(NSMutableArray *)oldArray
 {
-    [newArray enumerateObjectsUsingBlock:^(id  _Nonnull newObj, NSUInteger newIdx, BOOL * _Nonnull stop) {
+    for (int newIdx = 0; newIdx < newArray.count; newIdx++) {
+        NSObject *newObj = (NSObject *)newArray[newIdx];
         if (![newObj isKindOfClass:[LCDTableEntry class]]) {
             return;
         }
@@ -142,7 +142,7 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
         [tableEntry.indexesInOldFile removeObjectAtIndex:0];
         newArray[newIdx] = @(oldIndex);
         oldArray[oldIndex] = @(newIdx);
-    }];
+    }
 }
 
 - (NSMutableArray<LCDiffChange*> *)performFinalPassWithNewItems:(NSArray *)newItems oldItems:(NSArray *)oldItems newArray:(NSArray *)newArray oldArray:(NSArray *)oldArray
@@ -211,15 +211,15 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
     NSMutableArray *olds = [NSMutableArray new];
     NSMutableArray *news = [NSMutableArray new];
     
-    [oldItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LCDiffModel *oldModel = [[LCDiffModel alloc] initWithItem:obj row:idx section:0];
-        [olds addObject:oldModel];
-    }];
+    for (int row = 0; row < oldItems.count; row++) {
+        LCDiffModel *oModel = [[LCDiffModel alloc] initWithItem:oldItems[row] row:row section:0];
+        [olds addObject:oModel];
+    }
     
-    [newItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LCDiffModel *newModel = [[LCDiffModel alloc] initWithItem:obj row:idx section:0];
-        [news addObject:newModel];
-    }];
+    for (int row = 0; row < newItems.count; row++) {
+        LCDiffModel *nModel = [[LCDiffModel alloc] initWithItem:newItems[row] row:row section:0];
+        [news addObject:nModel];
+    }
     
     return [self diff:olds newItems:news];
 }
@@ -229,23 +229,23 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
     NSMutableArray *olds = [NSMutableArray new];
     NSMutableArray *news = [NSMutableArray new];
     
-    [oldItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSObject *oldObj = (NSObject *)obj;
-        NSArray *subDatalist = [oldObj dataList];
-        [subDatalist enumerateObjectsUsingBlock:^(id  _Nonnull subObj, NSUInteger subIdx, BOOL * _Nonnull stop) {
-            LCDiffModel *oldModel = [[LCDiffModel alloc] initWithItem:subObj row:subIdx section:idx];
-            [olds addObject:oldModel];
-        }];
-    }];
+    for (int section = 0; section < oldItems.count; section++) {
+        NSObject *sections = oldItems[section];
+        NSArray *rows = [sections dataList];
+        for (int row = 0; row < rows.count; row++) {
+            LCDiffModel *oModel = [[LCDiffModel alloc] initWithItem:rows[row] row:row section:section];
+            [olds addObject:oModel];
+        }
+    }
     
-    [newItems enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSObject *oldObj = (NSObject *)obj;
-        NSArray *subDatalist = [oldObj dataList];
-        [subDatalist enumerateObjectsUsingBlock:^(id  _Nonnull subObj, NSUInteger subIdx, BOOL * _Nonnull stop) {
-            LCDiffModel *newModel = [[LCDiffModel alloc] initWithItem:subObj row:subIdx section:idx];
-            [news addObject:newModel];
-        }];
-    }];
+    for (int section = 0; section < newItems.count; section++) {
+        NSObject *sections = newItems[section];
+        NSArray *rows = [sections dataList];
+        for (int row = 0; row < rows.count; row++) {
+            LCDiffModel *nModel = [[LCDiffModel alloc] initWithItem:rows[row] row:row section:section];
+            [news addObject:nModel];
+        }
+    }
     
     return [self diff:olds newItems:news];
 }

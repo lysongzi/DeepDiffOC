@@ -8,12 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LCDiffModel : NSObject
+#import "LCDiffStratege.h"
 
-@property (nonatomic, strong) id<NSObject> item;
+@interface LCDiffModel : NSObject <LCDiffModelProtocol>
+
+@property (nonatomic, strong) id<LCDiffModelProtocol> item;
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
-- (instancetype)initWithItem:(id<NSObject>)item row:(NSUInteger)row section:(NSUInteger)section;
+- (instancetype)initWithItem:(id<LCDiffModelProtocol>)item row:(NSUInteger)row section:(NSUInteger)section;
 
 @end
 

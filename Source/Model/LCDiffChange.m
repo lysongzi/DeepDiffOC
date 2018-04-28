@@ -14,7 +14,7 @@
 
 @implementation LCDiffModel
 
-- (instancetype)initWithItem:(id<NSObject>)item row:(NSUInteger)row section:(NSUInteger)section
+- (instancetype)initWithItem:(id<LCDiffModelProtocol>)item row:(NSUInteger)row section:(NSUInteger)section
 {
     if (self = [super init]) {
         _item = item;
@@ -42,10 +42,21 @@
     return [self.item hash];
 }
 
+#pragma mark - LCDiffModelProtocol
 
-- (id<NSObject>)diffIdentifier
+- (id<NSCopying>)diffIdentifier
 {
-    return self.item;
+    return [self.item diffIdentifier];
+}
+
+- (BOOL)isTwoDimensionDataSource
+{
+    return NO;
+}
+
+- (NSArray *)dataList
+{
+    return nil;
 }
 
 @end

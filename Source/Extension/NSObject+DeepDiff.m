@@ -28,9 +28,9 @@
     return [self isEqual:Obj];
 }
 
-- (id<NSObject>)diffIdentifier
+- (id<NSCopying>)diffIdentifier
 {
-    return [NSString stringWithFormat:@"%zi", self.hash];
+    return @(self.hash);
 }
 
 @end

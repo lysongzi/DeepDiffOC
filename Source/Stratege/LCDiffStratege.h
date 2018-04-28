@@ -9,7 +9,7 @@
 
 @class LCDiffChange;
 
-@protocol LCDiffDataSource <NSObject>
+@protocol LCDiffModelProtocol <NSObject>
 
 @required
 
@@ -35,6 +35,13 @@
  @return <#return value description#>
  */
 - (BOOL)isEqualToObject:(id)Obj;
+
+/**
+ identifier to identify a object
+
+ @return <#return value description#>
+ */
+- (id<NSCopying>)diffIdentifier;
 
 @end
 
