@@ -11,10 +11,7 @@
 #endif
 
 #import "LCDiffHeckle.h"
-
-#import "LCDiffStratege.h"
-#import "LCDiffChange.h"
-#import "NSObject+DeepDiff.h"
+#import "LCDeepDiff.h"
 
 typedef NS_ENUM(NSUInteger, LCDCounterType)
 {

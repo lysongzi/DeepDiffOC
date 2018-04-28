@@ -17,8 +17,8 @@
 		AB3436442016D91D00FEA045 /* LCDiffManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34363E2016D91D00FEA045 /* LCDiffManager.m */; };
 		AB3436452016D91D00FEA045 /* LCDiffStratege.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436422016D91D00FEA045 /* LCDiffStratege.m */; };
 		AB34366E20171BCF00FEA045 /* LCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34366D20171BCF00FEA045 /* LCDUser.m */; };
-		AB343674201729D000FEA045 /* LCDiffHeckle.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.mm */; };
-		AB343678201730E600FEA045 /* LCDiffHeckle.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.mm */; };
+		AB343674201729D000FEA045 /* LCDiffHeckle.m in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.m */; };
+		AB343678201730E600FEA045 /* LCDiffHeckle.m in Sources */ = {isa = PBXBuildFile; fileRef = AB343673201729D000FEA045 /* LCDiffHeckle.m */; };
 		AB3436A320185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */; };
 		AB3436A420185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */; };
 		AB3436A5201881B600FEA045 /* LCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB34366D20171BCF00FEA045 /* LCDUser.m */; };
@@ -65,7 +65,7 @@
 		AB34366C20171BCF00FEA045 /* LCDUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDUser.h; sourceTree = "<group>"; };
 		AB34366D20171BCF00FEA045 /* LCDUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCDUser.m; sourceTree = "<group>"; };
 		AB343672201729D000FEA045 /* LCDiffHeckle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDiffHeckle.h; sourceTree = "<group>"; };
-		AB343673201729D000FEA045 /* LCDiffHeckle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCDiffHeckle.mm; sourceTree = "<group>"; };
+		AB343673201729D000FEA045 /* LCDiffHeckle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCDiffHeckle.m; sourceTree = "<group>"; };
 		AB3436A120185FFE00FEA045 /* UITableView+DeepDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+DeepDiff.h"; sourceTree = "<group>"; };
 		AB3436A220185FFE00FEA045 /* UITableView+DeepDiff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DeepDiff.m"; sourceTree = "<group>"; };
 		AB3436E02019775200FEA045 /* UICollectionView+DeepDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+DeepDiff.h"; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				AB3436402016D91D00FEA045 /* LCDiffStratege.h */,
 				AB3436422016D91D00FEA045 /* LCDiffStratege.m */,
 				AB343672201729D000FEA045 /* LCDiffHeckle.h */,
-				AB343673201729D000FEA045 /* LCDiffHeckle.mm */,
+				AB343673201729D000FEA045 /* LCDiffHeckle.m */,
 				AB4C674120613ED2007E04A4 /* LCDiffIGHeckle.h */,
 				AB4C674220613ED2007E04A4 /* LCDiffIGHeckle.mm */,
 			);
@@ -246,7 +246,7 @@
 				TargetAttributes = {
 					AB3436142016D8DD00FEA045 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					AB34362C2016D8DD00FEA045 = {
 						CreatedOnToolsVersion = 9.2;
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3436A5201881B600FEA045 /* LCDUser.m in Sources */,
-				AB343678201730E600FEA045 /* LCDiffHeckle.mm in Sources */,
+				AB343678201730E600FEA045 /* LCDiffHeckle.m in Sources */,
 				AB3436442016D91D00FEA045 /* LCDiffManager.m in Sources */,
 				ABDED11C203FAF070064DBAA /* NSObject+DeepDiff.m in Sources */,
 				AB3436A320185FFE00FEA045 /* UITableView+DeepDiff.m in Sources */,
@@ -321,7 +321,7 @@
 			files = (
 				AB34366E20171BCF00FEA045 /* LCDUser.m in Sources */,
 				AB3436E32019775200FEA045 /* UICollectionView+DeepDiff.m in Sources */,
-				AB343674201729D000FEA045 /* LCDiffHeckle.mm in Sources */,
+				AB343674201729D000FEA045 /* LCDiffHeckle.m in Sources */,
 				AB731322201F2224008EA62B /* HeckleTest.m in Sources */,
 				AB4C67482061F4AB007E04A4 /* iGLHeckleTest.m in Sources */,
 				ABDED11E203FB6EF0064DBAA /* diffPerformanceTest.m in Sources */,
@@ -467,12 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeepDiffOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -481,12 +482,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8R7MJKG32F;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeepDiffOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bingolin.DeepDiffOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
