@@ -9,7 +9,7 @@
 
 @class LCDiffChange;
 
-@protocol LCDiffModelProtocol <NSObject>
+@protocol QQListDiffable <NSObject>
 
 @required
 
@@ -41,9 +41,11 @@
 
  @return <#return value description#>
  */
-- (id<NSCopying>)diffIdentifier;
+- (nonnull id<NSObject>)diffIdentifier;
 
 @end
+
+#pragma mark -
 
 @protocol LCDiffStrategy <NSObject>
 
@@ -66,6 +68,8 @@
 - (NSArray<LCDiffChange *> *)twoDimensionDiffForOldItems:(NSArray *)oldItems newItems:(NSArray *)newItems;
 
 @end
+
+#pragma mark -
 
 /**
  基础Diff策略对象，后续的不同diff策略对象可继承该对象进行扩展

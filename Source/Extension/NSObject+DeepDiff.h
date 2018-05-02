@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "LCDeepDiff.h"
 
-@interface NSObject (DeepDiff) <LCDiffModelProtocol>
+@interface NSObject (DeepDiff) <QQListDiffable>
 
 @end
 

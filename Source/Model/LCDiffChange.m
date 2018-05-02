@@ -14,7 +14,7 @@
 
 @implementation LCDiffModel
 
-- (instancetype)initWithItem:(id<LCDiffModelProtocol>)item row:(NSUInteger)row section:(NSUInteger)section
+- (instancetype)initWithItem:(id<QQListDiffable>)item row:(NSUInteger)row section:(NSUInteger)section
 {
     if (self = [super init]) {
         _item = item;
@@ -44,7 +44,7 @@
 
 #pragma mark - LCDiffModelProtocol
 
-- (id<NSCopying>)diffIdentifier
+- (nonnull id<QQListDiffable>)diffIdentifier
 {
     return [self.item diffIdentifier];
 }

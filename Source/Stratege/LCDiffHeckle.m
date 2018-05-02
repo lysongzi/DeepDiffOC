@@ -108,7 +108,8 @@ typedef NS_ENUM(NSUInteger, LCDCounterType)
         id<NSCopying> key = [oldItems[idx] diffIdentifier];
         LCDTableEntry *tableEntry = table[key] ?: [LCDTableEntry new];
         
-        tableEntry.aNewCounter++;
+        tableEntry.aOldCounter++;
+        [tableEntry.indexesInOldFile addObject:@(idx)];
         [oldArray addObject:tableEntry];
         table[key] = tableEntry;
     }

@@ -10,12 +10,12 @@
 
 #import "LCDiffStratege.h"
 
-@interface LCDiffModel : NSObject <LCDiffModelProtocol>
+@interface LCDiffModel : NSObject <QQListDiffable>
 
-@property (nonatomic, strong) id<LCDiffModelProtocol> item;
+@property (nonatomic, strong) id<QQListDiffable> item;
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
-- (instancetype)initWithItem:(id<LCDiffModelProtocol>)item row:(NSUInteger)row section:(NSUInteger)section;
+- (instancetype)initWithItem:(id<QQListDiffable>)item row:(NSUInteger)row section:(NSUInteger)section;
 
 @end
 

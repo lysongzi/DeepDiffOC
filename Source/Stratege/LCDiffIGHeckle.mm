@@ -20,9 +20,9 @@ using namespace std;
 /// Used to track data stats while diffing.
 struct IGListEntry {
     /// The number of times the data occurs in the old array
-    NSInteger oldCounter = 0;
+    NSUInteger oldCounter = 0;
     /// The number of times the data occurs in the new array
-    NSInteger newCounter = 0;
+    NSUInteger newCounter = 0;
     /// The indexes of the data in the old array
     stack<NSInteger> oldIndexes;
     /// Flag marking if the data has been updated between arrays by checking the isEqual: method

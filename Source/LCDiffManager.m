@@ -10,11 +10,7 @@
 #endif
 
 #import "LCDiffManager.h"
-
-#import "LCDiffChange.h"
-#import "LCDiffStratege.h"
-
-#import "NSObject+DeepDiff.h"
+#import "LCDeepDiff.h"
 
 @interface LCDiffManager ()
 
